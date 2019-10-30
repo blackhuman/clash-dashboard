@@ -18,5 +18,5 @@ deploy:
     file: clash-$TRAVIS_TAG.tar.gz
     skip_cleanup: true
     on:
-       repo: blackhuman/clash-dashboard
-       branch: dev
+        repo: blackhuman/clash-dashboard
+        branch: dev
