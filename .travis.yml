@@ -11,12 +11,12 @@ script:
     - "npm run lint"
 before_deploy:
     - "npm run build"
+    - "tar -czf clash-$TRAVIS_TAG.tar.gz dist"
 deploy:
-    provider: pages
-    skip-cleanup: true
-    local-dir: dist
-    github-token: $GITHUB_TOKEN
-    fqdn: clash.razord.top
+    provider: releases
+    api_key: $GITHUB_TOKEN
+    file: clash-$TRAVIS_TAG.tar.gz
+    skip_cleanup: true
     on:
-        repo: Dreamacro/clash-dashboard
-        branch: master
+       repo: blackhuman/clash-dashboard
+       branch: dev
