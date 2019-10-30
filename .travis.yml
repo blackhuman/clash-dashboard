@@ -20,4 +20,3 @@ deploy:
     on:
         repo: blackhuman/clash-dashboard
         branch: dev
-
